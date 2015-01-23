@@ -1,5 +1,5 @@
 # mailcatcher (Ubuntu 14.04)
-# 0.0.0.7
+# 0.0.0.8
 
 docker run -d -t -p "10800:1080" -p "25:25" --name mailcatcher iomq/mailcatcher
 
