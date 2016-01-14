@@ -9,7 +9,7 @@ RUN apt-get update -qq && apt-get -y dselect-upgrade
 RUN apt-get install -y ruby ruby-dev sqlite3 libsqlite3-dev binutils build-essential bzip2 cpp dpkg-dev fakeroot g++ make
 RUN apt-get update -qq && apt-get -y dselect-upgrade
 RUN gem install mailcatcher --no-ri --no-rdoc
-RUN echo "0.1.20151216.0" > /etc/iomq_version
+RUN echo "0.1.20160114.0" > /etc/iomq_version
 RUN apt-get update -qq && apt-get -y dselect-upgrade
 
 EXPOSE 1080
