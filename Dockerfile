@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER Holger May "docker@iomq.org"
 
 #ENV
@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update -qq && apt-get -y dselect-upgrade
 RUN apt-get install -y ruby ruby-dev sqlite3 libsqlite3-dev binutils build-essential bzip2 cpp dpkg-dev fakeroot g++ make
 RUN apt-get update -qq && apt-get -y dselect-upgrade
-RUN echo "0.1.20160421.0" > /etc/iomq_version
+RUN echo "0.2.20160421.0" > /etc/iomq_version
 RUN gem install mailcatcher --no-ri --no-rdoc
 RUN apt-get update -qq && apt-get -y dselect-upgrade
 
