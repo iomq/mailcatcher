@@ -5,10 +5,10 @@ MAINTAINER Holger May "docker@iomq.org"
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install packages
+RUN echo "0.4.20161006.0" > /etc/iomq_version
 RUN apt-get update -qq && apt-get -y dselect-upgrade
 RUN apt-get install -y ruby ruby-dev sqlite3 libsqlite3-dev binutils build-essential bzip2 cpp dpkg-dev fakeroot g++ make
 RUN apt-get update -qq && apt-get -y dselect-upgrade
-RUN echo "0.3.20160923.1" > /etc/iomq_version
 RUN gem install mailcatcher --no-ri --no-rdoc
 RUN apt-get update -qq && apt-get -y dselect-upgrade
 
