@@ -1,11 +1,11 @@
 FROM ubuntu:16.04
-MAINTAINER Holger May "docker@iomq.org"
+LABEL maintainer="Holger May <docker@iomq.org>"
 
 #ENV
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install packages
-RUN echo "0.4.20180405.0" > /etc/iomq_version
+RUN echo "0.4.20180406.0" > /etc/iomq_version
 RUN apt-get update -qq && apt-get -y dselect-upgrade
 RUN apt-get install -y ruby ruby-dev sqlite3 libsqlite3-dev binutils build-essential bzip2 cpp dpkg-dev fakeroot g++ make
 RUN apt-get update -qq && apt-get -y dselect-upgrade
