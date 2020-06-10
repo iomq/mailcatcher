@@ -1,7 +1,7 @@
 
 # mailcatcher (Ubuntu 16.04)
 
-# 0.4.20200610.0
+# 0.4.20200610.1
 
 docker run -d -t -p "10800:1080" -p "25:25" --name mailcatcher iomq/mailcatcher
 
